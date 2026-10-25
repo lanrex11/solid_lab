@@ -16,11 +16,11 @@ public class Bill {
 	public void totalCalc() {
 		
 		// Dedukzioa kalkulatu
-		DeductionCalculatorHigh dCalc = new DeductionCalculatorHigh();
+		IDeductionCalculator dCalc = new DeductionCalculatorHigh();
 		billDeduction = dCalc.calculate(this);
 		
 		// VAT kalkulatzen dugu
-		VAT0 vCalc = new VAT0();
+		IVATCalculator vCalc = new VAT0();
 		VAT =  vCalc.calculate(this);
 		
 		// Totala kalkulatzen dugu
